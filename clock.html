@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+    <style>
+        #try{
+            text-align: center;
+            border-radius: 20px;
+            width:500px;
+            font-size:90px;
+            border:2px solid black;
+            margin:300px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="try">11:03:21</div>
+</body>
+<script>
+    setInterval(showtime,1000)
+    function showtime()
+    {
+        var time = new Date();
+        var hour = time.getHours();
+        var min = time.getMinutes()
+        var sec = time.getSeconds();
+        am_pm = "AM";
+
+        if(hour>12)
+        {
+            hour = hour - 12;
+            am_pm = "PM";
+        }
+        if(hour==0)
+        {
+            hour = 12;
+            am_pm = "AM";
+        }
+
+        hour = hour < 10 ? "0" + hour:hour;
+        min = min < 10 ? "0" + min:min;
+        sec = sec < 10 ? "0" + sec:sec;
+
+        var current_time = hour + ":" + min + ":" + sec + am_pm;
+        document.getElementById("try").innerHTML = current_time;
+    }
+</script>
+</html>
