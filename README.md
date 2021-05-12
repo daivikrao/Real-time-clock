@@ -1,1 +1,5 @@
-# Real-time-clock thats shows the real time by taking the current time from your laptop or pc.Its done using html,css and javascript.
+# Real-time-clock 
+## Description
+  * The clock takes in real time from the laptop or PC and displays the current time.
+  * Its done using HTML,basic css and javascript.
+  * The code is free to use.
